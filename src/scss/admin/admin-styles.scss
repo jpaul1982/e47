@@ -1,0 +1,121 @@
+$primary: #fa4238;
+$beige: #faf6e6;
+$lblue:	#7897ab;
+$white: #ffffff;
+@mixin transition($time) {
+    -webkit-transition-duration: $time; /* Safari */
+    transition-duration: $time;
+    transition-timing-function: ease-in-out;
+}
+.login {
+    background-color: $beige;
+    #login {
+        * {
+            font-family: 'work sans', sans-serif;
+            font-size: 16px;
+            letter-spacing: -.015em;
+        }
+        h1 {
+            a {
+                background-image: url(../img/e47-logo.png);
+                width: 100%;
+                background-size: 220px;
+                &:focus {
+                    outline: none;
+                    box-shadow: none;
+                }
+            }
+        }
+
+        #user_login,
+        #user_pass {
+            border-radius: 0;
+            border: none;
+            border-bottom: 4px solid #fff;
+            padding: 10px 15px !important;
+            &:focus {
+                box-shadow: none;
+                border-bottom: 4px solid #f0e4b2;
+            }
+        }
+        #loginform {
+            padding: 0;
+            border: 0;
+            background-color: $beige;
+            box-shadow: none;
+        }
+        #backtoblog {
+            display: none;
+        }
+    }
+    #user_login:focus,
+    #user_pass:focus {
+        box-shadow: 0 0 0 1px $primary;
+        border-color: $primary;
+    }
+    #wp-submit.button {
+        background-color: $primary;
+        color: #fff;
+        line-height: normal !important;
+        padding: 10px 20px !important;
+        display: inline-block;
+        text-decoration: none;
+        font-weight: 700;
+        cursor: pointer;
+        border: none;
+        margin: 0;
+        transition: all .2s ease;
+        font-size: 18px;
+        border-radius: 3px;
+        &:hover {
+            background: #013c4d;
+        }
+    }
+
+    #nav {
+        padding: 0;
+    }
+}
+.repeater-flex {
+    .acf-repeater {
+        tbody {
+            display: flex;
+            flex-direction: row;
+        }
+        tr.acf-row:not(.acf-clone) {
+            width: 100%;
+        }
+        tr.acf-row:not(.acf-clone) td.acf-fields {
+            width: 100% !important;
+        }
+    }
+    &.quarters {
+        .acf-repeater {
+            tbody {
+                flex-wrap: wrap;
+                &>* {
+                    flex: 0 0 25%;
+                }
+            }
+        }
+    }
+    &.thirds {
+        .acf-repeater {
+            tbody {
+                flex-wrap: wrap;
+                &>* {
+                    flex: 0 0 33.33%;
+                }
+            }
+        }
+    }
+}
+.toplevel_page_theme-general-settings {
+    img {
+        height: 20px;
+        padding-top: 7px;
+        opacity: 1 !important;
+    }
+}
+.wp-block {
+    max-width: 1280px; }

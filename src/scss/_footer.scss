@@ -1,0 +1,121 @@
+footer {
+  .flex-grid {
+    flex-direction: column;
+    justify-content: space-between;
+    .flex-item:nth-of-type(1) {
+      flex-basis: 25%;
+    }
+    .flex-item:nth-of-type(2) {
+      flex-basis: 45%;
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 5rem;
+      @media (min-width: 768px) {
+        margin-top: 0;
+      }
+    }
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+    }
+  }
+  background-color: $color-neutral;
+  padding: 6.125rem 60px;
+  .logo-wrapper {
+    max-width: 195px;
+    margin-bottom: 27px;
+  }
+  p {
+    color: $color-white;
+    font: normal normal 21px/35px "Work Sans", sans-serif;
+  }
+
+  .footer-menu {
+    ul {
+      list-style: none;
+      column-count: 2;
+      li {
+        padding: 0 0 1rem 0;
+        @media (min-width: 768px) {
+          padding: 0 1rem 1rem;
+        }
+        a {
+          text-decoration: none;
+          font: normal normal 15px/21px "Work Sans", sans-serif;
+          color: $color-white;
+          transition: all 0.3s ease-out;
+
+          &:hover {
+            color: $color-primary;
+            transition: all 0.3s ease-out;
+          }
+        }
+      }
+    }
+  }
+
+  .small-text {
+    span,
+    a {
+      font: normal normal 14px/21px "Work Sans", sans-serif;
+      color: $color-white;
+    }
+    a {
+      text-decoration: none;
+
+      display: block;
+      &:hover {
+        color: $color-primary;
+        transition: all 0.3s ease-out;
+      }
+    }
+  }
+  .contact-info {
+    font: normal normal 15px/21px "Work Sans", sans-serif;
+    color: $color-white;
+
+    div {
+      padding-bottom: 1rem;
+      &:nth-of-type(1) {
+        a {
+          font-weight: bold;
+          &:hover {
+            color: $color-primary;
+            transition: all 0.3s ease-out;
+          }
+        }
+      }
+      &:nth-of-type(3) {
+        a {
+          text-decoration: underline;
+        }
+      }
+    }
+    a {
+      font: normal normal 15px/21px "Work Sans", sans-serif;
+      color: $color-white;
+      text-decoration: none;
+      &:nth-of-type(3) {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .social {
+    a {
+      display: inline-block;
+      padding-right: 0.75rem;
+      &:hover {
+        color: $color-primary;
+      }
+      i {
+        transform: scale(1.25);
+      }
+    }
+    p {
+      font: normal bold 15px/35px "Work Sans", sans-serif;
+      padding-top: 2rem;
+      margin-bottom: 0.5rem;
+    }
+  }
+}
